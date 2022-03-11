@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { useState } from "react";
 import { getAddresses, TOKEN_DECIMALS, DEFAULD_NETWORK } from "../../../constants";
 import { useSelector } from "react-redux";
@@ -60,22 +61,22 @@ function TimeMenu() {
       <Popper className="rug-menu-popper" open={open} anchorEl={anchorEl} transition>
         {({ TransitionProps }) => (
           <Fade {...TransitionProps} timeout={200}>
-            <div className="tooltip">
+            <div className="tooltip" >
               {/* <Link component={NavLink} className="tooltip-item" to="/buy/rugDexUSDC">
                 <p>Buy on RugSwap</p>
               </Link> */}
-              <Link component={NavLink} to="/buy/tjDex" className="tooltip-item">
+              <Link component={NavLink} to="/buy/tjDex" className="tooltip-item" style={{ padding: '20px' }}>
                 <p>Buy on TradeJoe</p>
               </Link>
               {isEthereumAPIAvailable && (
                 <div className="add-tokens">
                   <div className="divider" />
-                  <p className="add-tokens-title">ADD TOKEN TO WALLET</p>
+                  <p className="add-tokens-title" style={{ padding: '20px' }}>ADD TOKEN TO WALLET</p>
                   <div className="divider" />
-                  <div className="tooltip-item" onClick={addTokenToWallet("RUG", RUG_ADDRESS)}>
+                  <div className="tooltip-item" style={{ padding: '20px' }} onClick={addTokenToWallet("RUG", RUG_ADDRESS)}>
                     <p>RUG</p>
                   </div>
-                  <div className="tooltip-item" onClick={addTokenToWallet("SRUG", SRUG_ADDRESS)}>
+                  <div className="tooltip-item" style={{ padding: '20px' }} onClick={addTokenToWallet("SRUG", SRUG_ADDRESS)}>
                     <p>SRUG</p>
                   </div>
                 </div>

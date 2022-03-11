@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useWeb3Context } from "../../../hooks";
@@ -27,7 +28,7 @@ function ConnectMenu() {
 
   if (pendingTransactions && pendingTransactions.length > 0) {
     buttonText = `${pendingTransactions.length} Pending `;
-    clickFunc = () => {};
+    clickFunc = () => { };
   }
 
   if (isConnected && providerChainID !== DEFAULD_NETWORK) {

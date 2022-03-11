@@ -4,10 +4,9 @@
   display: flex;
   flex-direction: column;
 
-  .logo-style{
+  .logo-style {
     max-width: 150px;
   }
-
 
   .branding-header {
     display: flex;
@@ -103,13 +102,12 @@
   }
 
   .dapp-menu-doc-link {
-    margin-top: auto;
+    margin-top: 20px;
 
     a {
       display: flex;
       width: 100%;
-      align-items: center;
-      justify-content: center;
+      padding-left: 8%;
       margin-bottom: 20px;
 
       img {
@@ -132,8 +130,11 @@
   .social-row {
     display: flex;
     flex-flow: row;
-    justify-content: space-evenly;
     padding: 1.3rem;
+
+    :not(:first-child) {
+      padding-left: 30px;
+    }
     a {
       &:hover {
         transform: scale(1.1);
@@ -157,7 +158,7 @@
 
     /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
     @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-      background: #3E3A71;
+      background: #3e3a71;
     }
   }
 }
